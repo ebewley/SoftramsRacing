@@ -1,11 +1,20 @@
+<!-- Login Page -->
 <main class="login-form">
+
+  <!-- Card Container -->
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-8">
+
+        <!-- Login Card -->
         <div class="card">
           <div class="card-header text-center">Login</div>
           <div class="card-body">
+
+            <!-- Login Form -->
             <form [formGroup]="loginForm" (ngSubmit)="login()" >
+
+              <!-- Username -->
               <div class="form-group row">
                 <label for="username" class="col-md-4 col-form-label text-md-right">Username</label>
                 <div class="col-md-6">
@@ -13,6 +22,7 @@
                 </div>
               </div>
 
+              <!-- Password -->
               <div class="form-group row">
                 <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
                 <div class="col-md-6">
@@ -20,6 +30,7 @@
                 </div>
               </div>
 
+              <!-- Remember Me -->
               <div class="form-group row">
                 <div class="col-md-6 offset-md-4">
                   <div class="checkbox">
@@ -30,11 +41,14 @@
                 </div>
               </div>
 
+              <!-- Login button -->
               <div class="col-md-6 offset-md-4">
                 <button type="submit" class="btn w-100 btn-primary" [disabled]="!loginForm.valid">
                   Login
                 </button>
               </div>
+
+              <!-- ISSUE:  High:  There is no Cancel button on the form.  When users get here, there's no way to leave. -->
           </form>
         </div>
       </div>

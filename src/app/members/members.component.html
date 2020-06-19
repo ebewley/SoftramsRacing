@@ -1,6 +1,12 @@
+<!-- Members -->
+<!-- Its usually a good idea to have a class which can apply styles to the entire page/component, or for queries. -->
 <div class="container-fluid">
+
+  <!-- Add Member Button -->
   <button id="addMemberButton" class="btn btn-primary pull-right" (click)="goToAddMemberForm()">Add Member</button>
   <table class="table">
+
+    <!-- Headers -->
     <thead>
       <tr>
         <th>Member ID</th>
@@ -11,6 +17,8 @@
         <th>Status</th>
       </tr>
     </thead>
+
+    <!-- Detail Lines -->
     <tbody>
       <tr *ngFor='let member of members'>
         <td>{{member?.id}}</td>

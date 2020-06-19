@@ -1,6 +1,9 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
+    // ### BEGIN added by Eric
+    "emitDecoratorMetadata": true,
+    // ### END added by Eric
     "outDir": "../out-tsc/spec",
     "types": [
       "jasmine",

@@ -1,10 +1,18 @@
+<!-- Member Details Component/Page -->
+<!-- Its usually a good idea to have a class which can apply styles to the entire page/component, or for queries. -->
 <div class="container-fluid col-md-6">
   <h3 class="text-center lead">Add Member to Racing Team</h3>
   <br />
+
   <!--Template Driven Form or Model Driven Form?-->
+  <!-- This is currently set up as a MODEL DRIVEN form, but in this case I might question why we need all that extra coding. -->
+
+  <!-- MemberForm -->
   <form (ngSubmit)="onSubmit(memberForm)">
     <div>
       <div class="row">
+
+        <!-- First Name -->
         <div class="col-md-6">
           <input
             type="text"
@@ -13,6 +21,8 @@
             placeholder="First Name"
           />
         </div>
+
+        <!-- Last Name -->
         <div class="col-md-6">
           <input
             type="text"
@@ -24,6 +34,8 @@
       </div>
       <br />
       <div class="row">
+
+        <!-- Job Title -->
         <div class="col-md-6">
           <input
             type="text"
@@ -32,12 +44,16 @@
             placeholder="Job Title"
           />
         </div>
+
         <!--We may have to make a service call to get this list-->
+        <!-- Team -->
         <select id="team" class="col-md-6 custom-select">
           <option *ngFor="let team of teams">{{ team.teamName }}</option>
         </select>
       </div>
       <br />
+
+      <!-- Status -->
       <div class="form-group col-md-6">
         <div class="row">
           <label id="activeStatus" class="md-check lead">
@@ -49,9 +65,13 @@
         </div>
       </div>
     </div>
+
     <!--Disable if form is invalid-->
+    <!-- Buttons -->
     <button type="submit" class="btn btn-primary pull-right">
       Save Member
     </button>
+
+    <!-- ISSUE:  HIGH:  This form needs a Cancel button so that the user can exit the form back to the previous one! -->
   </form>
 </div>
